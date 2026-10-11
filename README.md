@@ -1,6 +1,6 @@
 # 复读撤回打断机 (astrbot_plugin_interrupter)
 
-合并 [astrbot_plugin_repetition](https://github.com/FengYing1314/astrbot_plugin_repetition) 与 [astrbot_plugin_recall](https://github.com/iris1598/astrbot_plugin_recall) 两个插件功能的 AstrBot 插件。
+AstrBot 插件：群复读检测打断 + 引用消息回复"撤回"即可撤回。
 
 ## 功能
 
@@ -55,3 +55,10 @@
 
 - 复读检测自动跳过：唤醒机器人的消息（@机器人 / 前缀指令）、机器人自己的消息、带引用的消息。
 - 引用撤回使用 OneBot v11 的 `delete_msg` 接口；撤回他人的消息需要机器人具备群管理员权限。
+
+## 参考项目
+
+本插件的复读检测打断与引用撤回功能参考了以下项目：
+
+- [astrbot_plugin_repetition](https://github.com/FengYing1314/astrbot_plugin_repetition) @ FengYing1314
+- [astrbot_plugin_recall](https://github.com/iris1598/astrbot_plugin_recall) @ iris1598
