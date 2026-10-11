@@ -1,0 +1,17 @@
+# Python 运行时产物
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+
+# 版本控制目录
+.git/
+
+# 打包产物
+*.zip
+*.7z
+*.tar.gz
+
+# 系统文件
+.DS_Store
+Thumbs.db

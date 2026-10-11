@@ -1,0 +1,57 @@
+{
+  "trigger_count": {
+    "description": "复读触发条数",
+    "type": "int",
+    "default": 2,
+    "hint": "群里连续出现多少条相同消息时触发打断，最小为 2"
+  },
+  "break_spell_probability": {
+    "description": "打断施法概率",
+    "type": "float",
+    "default": 0.3,
+    "hint": "触发复读时发送打断文本的概率，范围 0-1；未命中时按跟风复读配置处理"
+  },
+  "break_spell_text": {
+    "description": "打断施法文本",
+    "type": "string",
+    "default": "打断施法！",
+    "hint": "概率命中后发送的文本内容"
+  },
+  "follow_repeat": {
+    "description": "跟风复读",
+    "type": "bool",
+    "default": true,
+    "hint": "触发复读且未发送打断文本时，机器人跟着复读一条"
+  },
+  "enable_recall": {
+    "description": "撤回复读消息",
+    "type": "bool",
+    "default": false,
+    "hint": "触发复读时同时撤回参与复读的消息，需要机器人为群管理员，仅 OneBot v11 生效"
+  },
+  "recall_max_count": {
+    "description": "最多撤回条数",
+    "type": "int",
+    "default": 3,
+    "hint": "触发撤回复读时，最多撤回最近多少条复读消息"
+  },
+  "recall_trigger_text": {
+    "description": "引用撤回触发词",
+    "type": "string",
+    "default": "撤回",
+    "hint": "引用某条消息后回复该文本即尝试撤回被引用的消息（需精确匹配）"
+  },
+  "recall_scope": {
+    "description": "引用撤回范围",
+    "type": "string",
+    "default": "all",
+    "hint": "all=任何被引用的消息；self_only=仅机器人自己发的消息",
+    "options": ["all", "self_only"]
+  },
+  "stop_llm": {
+    "description": "撤回后阻断 LLM 回复",
+    "type": "bool",
+    "default": true,
+    "hint": "开启后触发引用撤回时不会请求 LLM，机器人不会额外回复"
+  }
+}
